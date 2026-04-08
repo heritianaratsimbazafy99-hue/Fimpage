@@ -9,6 +9,7 @@ Landing page d'inscription moderne pour la Foire Internationale de Madagascar, c
 - un formulaire sur mesure avec logique conditionnelle
 - un mode démonstration local si l'URL Apps Script n'est pas encore branchée
 - un exemple complet de script Google Apps Script pour Google Sheets + GmailApp
+- notification email participant et notification email administrateur côté Apps Script
 
 ## Stack
 
@@ -87,4 +88,3 @@ Ensuite :
 1. importez le repo sur Vercel
 2. configurez `NEXT_PUBLIC_APPS_SCRIPT_URL`
 3. reliez le projet à votre futur sous-domaine, par exemple `inscription.fim.mg`
-
