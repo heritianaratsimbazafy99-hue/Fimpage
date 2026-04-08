@@ -8,9 +8,9 @@ export function Footer() {
               FIM 2026
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-7">
-              Landing page d’inscription conçue pour accueillir un programme
-              évolutif, un formulaire sur mesure et une connexion légère vers
-              Google Sheets / Google Workspace.
+              Inscriptions officielles aux workshops, tables rondes et créneaux
+              de speed recruiting proposés pendant la Foire Internationale de
+              Madagascar à la CCI Ivato.
             </p>
           </div>
 
@@ -21,8 +21,11 @@ export function Footer() {
             <a href="#inscription" className="transition hover:text-fim-blue">
               Inscription
             </a>
-            <a href="mailto:inscription@fim.mg" className="transition hover:text-fim-blue">
-              inscription@fim.mg
+            <a
+              href="mailto:heritiana.ratsimbazafy99@gmail.com"
+              className="transition hover:text-fim-blue"
+            >
+              heritiana.ratsimbazafy99@gmail.com
             </a>
           </div>
         </div>
@@ -30,4 +33,3 @@ export function Footer() {
     </footer>
   );
 }
-

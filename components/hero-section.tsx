@@ -118,41 +118,41 @@ export function HeroSection({
 
                 <div className="mt-6 rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
                   <p className="text-xs uppercase tracking-[0.25em] text-slate-200/60">
-                    Ce que la page propose
+                    Informations clés
                   </p>
                   <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-100/80">
-                    <li>Programme visuel central, filtrable et facilement éditable.</li>
-                    <li>Formulaire sur mesure prérempli depuis les cartes sessions.</li>
-                    <li>Connexion native prévue vers Google Sheets et Gmail Workspace.</li>
+                    <li>Sessions ouvertes pendant la FIM du 7 au 10 mai 2026 à la CCI Ivato.</li>
+                    <li>Inscriptions accessibles aux visiteurs, exposants et recruteurs.</li>
+                    <li>Confirmation envoyée par email après validation de votre demande.</li>
                   </ul>
                 </div>
 
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
                     <p className="text-xs uppercase tracking-[0.22em] text-slate-200/60">
-                      Parcours
+                      Au programme
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Découverte → choix → inscription → confirmation
+                      Workshops, tables rondes et speed recruiting
                     </p>
                   </div>
                   <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
                     <p className="text-xs uppercase tracking-[0.22em] text-slate-200/60">
-                      Déploiement
+                      Participation
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Pensé pour Vercel et futur sous-domaine FIM
+                      Réservation recommandée selon les places disponibles
                     </p>
                   </div>
                 </div>
 
                 <div className="mt-5 rounded-[1.75rem] border border-white/10 bg-gradient-to-r from-fim-orange/20 to-transparent p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-fim-mist">
-                    Focus UX
+                    Participation en ligne
                   </p>
                   <p className="mt-3 text-base leading-7 text-white/90">
-                    Chaque session peut ouvrir ou préremplir le formulaire pour
-                    garder un parcours fluide sur mobile comme sur desktop.
+                    Choisissez vos créneaux, complétez vos informations et
+                    confirmez votre venue directement depuis cette page.
                   </p>
                 </div>
               </div>

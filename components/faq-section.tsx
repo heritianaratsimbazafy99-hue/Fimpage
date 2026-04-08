@@ -5,19 +5,19 @@ const faqItems = [
       "Elle est fortement recommandée pour anticiper la capacité des espaces et mieux préparer l’accueil des participants.",
   },
   {
-    question: "Puis-je participer à plusieurs sessions ?",
+    question: "Puis-je réserver plusieurs sessions ?",
     answer:
-      "Oui. La structure est prévue pour multiplier les inscriptions et garder un suivi clair dans Google Sheets.",
+      "Oui, vous pouvez réserver plusieurs créneaux en fonction des disponibilités et de votre agenda pendant la FIM.",
   },
   {
     question: "Comment vais-je recevoir la confirmation ?",
     answer:
-      "Le flux cible prévoit un email automatique envoyé via Google Workspace après l’enregistrement par Google Apps Script.",
+      "Une confirmation vous est envoyée par email à l’adresse renseignée lors de votre inscription.",
   },
   {
-    question: "Comment transmettre mes besoins pour le speed recruiting ?",
+    question: "Que dois-je renseigner pour le speed recruiting ?",
     answer:
-      "Le formulaire prévoit déjà les champs utiles pour préciser les postes, le volume, le profil recherché et l’envoi éventuel d’une fiche de poste.",
+      "Le formulaire vous permet de préciser vos besoins de recrutement, les postes recherchés, le nombre de postes, le profil attendu et l’envoi éventuel d’une fiche de poste.",
   },
 ];
 
@@ -30,8 +30,8 @@ export function FAQSection() {
           <div>
             <h2 className="section-title">Les réponses clés avant de vous inscrire.</h2>
             <p className="section-copy mt-5">
-              Une FAQ courte, directe et parfaitement adaptée à une landing page
-              d’événement pour rassurer sans surcharger le parcours.
+              Les informations essentielles pour réserver votre place en toute
+              simplicité et préparer votre venue pendant la FIM.
             </p>
           </div>
 
@@ -53,4 +53,3 @@ export function FAQSection() {
     </section>
   );
 }
-

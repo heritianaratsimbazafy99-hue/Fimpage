@@ -210,12 +210,12 @@ export function RegistrationForm({
                 Formulaire d&apos;inscription
               </span>
               <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
-                Un formulaire simple, lisible et déjà prêt pour Google Sheets.
+                Confirmez votre participation en quelques instants.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-slate-100/80">
-                Choisissez votre session, renseignez votre profil puis soumettez.
-                La structure est déjà prévue pour l’enregistrement, le suivi de
-                présence et une future évolution vers QR code / check-in.
+                Sélectionnez votre session, complétez vos coordonnées et validez
+                votre inscription. Un email de confirmation vous sera adressé
+                après enregistrement.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -234,22 +234,22 @@ export function RegistrationForm({
                       </p>
                     </>
                   ) : (
-                    <p className="mt-3 text-base leading-7 text-slate-100/75">
-                      Aucune session sélectionnée pour l’instant. Vous pouvez
-                      choisir directement depuis le programme ou dans le
-                      formulaire ci-contre.
+                      <p className="mt-3 text-base leading-7 text-slate-100/75">
+                      Choisissez votre session depuis le programme ou
+                      sélectionnez directement le créneau souhaité dans le
+                      formulaire.
                     </p>
                   )}
                 </div>
 
                 <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
                   <p className="text-xs uppercase tracking-[0.22em] text-fim-mist">
-                    Ce qui se passe ensuite
+                    Après validation
                   </p>
                   <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-100/75">
-                    <li>Validation des informations essentielles côté interface.</li>
-                    <li>Envoi JSON au Web App Google Apps Script.</li>
-                    <li>Écriture dans Google Sheets et email de confirmation.</li>
+                    <li>Votre demande d’inscription est enregistrée.</li>
+                    <li>Un email de confirmation vous est envoyé.</li>
+                    <li>L’équipe peut vous recontacter si nécessaire.</li>
                   </ul>
                 </div>
               </div>
@@ -260,21 +260,14 @@ export function RegistrationForm({
             <div className="mb-6 flex flex-col gap-3 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm font-semibold text-slate-950">
-                  Inscription personnalisée
+                  Inscription en ligne
                 </p>
                 <p className="text-sm text-slate-500">
                   Les champs évoluent selon le type de session choisi.
                 </p>
               </div>
-              <span
-                className={[
-                  "inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]",
-                  hasAppsScriptEndpoint
-                    ? "bg-emerald-50 text-emerald-700"
-                    : "bg-amber-50 text-amber-700",
-                ].join(" ")}
-              >
-                {hasAppsScriptEndpoint ? "Apps Script connecté" : "Mode démo"}
+              <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+                Confirmation par email
               </span>
             </div>
 
@@ -369,7 +362,7 @@ export function RegistrationForm({
                 label="Session choisie"
                 name="sessionId"
                 error={errors.sessionId}
-                hint="Le formulaire peut se préremplir automatiquement si vous cliquez depuis une carte session."
+                hint="Choisissez le créneau que vous souhaitez réserver."
               >
                 <select
                   value={formValues.sessionId}

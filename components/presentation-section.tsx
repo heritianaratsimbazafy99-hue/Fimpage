@@ -5,19 +5,19 @@ const highlights = [
     icon: CalendarRange,
     title: "Consultez le programme",
     copy:
-      "Repérez rapidement les sessions qui vous concernent pendant la FIM et visualisez leur format d’un seul coup d’œil.",
+      "Repérez rapidement les sessions qui vous intéressent et retrouvez leurs informations essentielles en un coup d’œil.",
   },
   {
     icon: MousePointerClick,
     title: "Réservez votre place",
     copy:
-      "Un clic sur une carte suffit pour préremplir le formulaire avec la session choisie et accélérer l’inscription.",
+      "Sélectionnez votre créneau, renseignez vos informations et confirmez votre participation en quelques instants.",
   },
   {
     icon: MailCheck,
     title: "Recevez la confirmation",
     copy:
-      "Chaque inscription est pensée pour être enregistrée dans Google Sheets puis confirmée automatiquement par email.",
+      "Un email de confirmation vous est envoyé après validation de votre inscription.",
   },
 ];
 
@@ -29,15 +29,15 @@ export function PresentationSection() {
           <div>
             <span className="eyebrow">Présentation</span>
             <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight text-white sm:text-4xl">
-              Une page d’inscription pensée pour transformer l’intérêt en
-              participation réelle.
+              Préparez votre venue et réservez les sessions qui vous intéressent.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200/80">
-              Les sessions se déroulent pendant la FIM à la CCI Ivato.
-              L’inscription est recommandée pour mieux anticiper les places
-              disponibles. Certaines séquences sont pensées pour les visiteurs,
-              d’autres pour les exposants, recruteurs ou partenaires qui veulent
-              préparer leurs échanges en amont.
+              Pendant la FIM, plusieurs espaces accueilleront des workshops, des
+              tables rondes et des temps de speed recruiting. Certaines sessions
+              s’adressent au grand public professionnel, d’autres sont
+              particulièrement utiles aux exposants, recruteurs et partenaires.
+              L’inscription permet d’organiser l’accueil et de vous confirmer
+              votre participation dans les meilleures conditions.
             </p>
           </div>
 

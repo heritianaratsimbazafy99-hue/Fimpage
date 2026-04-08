@@ -4,17 +4,17 @@ const infoCards = [
   {
     icon: MapPin,
     title: "Lieu",
-    copy: "CCI Ivato, Antananarivo. Les espaces peuvent varier selon le format et le créneau choisi.",
+    copy: "CCI Ivato, Antananarivo. Le lieu précis de chaque session est rappelé sur sa carte programme.",
   },
   {
     icon: Ticket,
     title: "Participation",
-    copy: "L’inscription est recommandée pour sécuriser votre place, surtout sur les formats courts ou à jauge maîtrisée.",
+    copy: "L’inscription est recommandée pour faciliter l’accueil et anticiper les sessions à capacité limitée.",
   },
   {
     icon: ShieldCheck,
-    title: "Accès & suivi",
-    copy: "La structure prévoit déjà un identifiant futur pour gérer check-in, présence et évolution QR code.",
+    title: "Confirmation",
+    copy: "Un email de confirmation vous est envoyé après validation de votre demande d’inscription.",
   },
 ];
 
@@ -30,9 +30,9 @@ export function InfoSection() {
             Tout ce qu’il faut pour participer sereinement.
           </h2>
           <p className="section-copy mt-5">
-            Cette base est volontairement simple à maintenir. Les contenus sont
-            structurés pour intégrer ensuite vos liens, captures, coordonnées
-            officielles et détails logistiques réels.
+            Retrouvez ici les repères utiles avant votre venue pour profiter
+            pleinement des workshops, tables rondes et créneaux de speed
+            recruiting proposés pendant la FIM.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -53,14 +53,14 @@ export function InfoSection() {
 
         <div className="rounded-[2rem] bg-slate-950 p-6 text-white shadow-spotlight sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-fim-mist">
-            Conseils
+            Avant votre venue
           </p>
           <div className="mt-5 space-y-4 text-sm leading-7 text-slate-100/80">
-            <p>Privilégiez une inscription par session pour garder un suivi propre.</p>
-            <p>Les exposants et recruteurs peuvent préparer leurs besoins en amont.</p>
+            <p>Présentez-vous quelques minutes avant le début du créneau choisi.</p>
+            <p>Vous pouvez réserver plusieurs sessions selon les disponibilités.</p>
             <p>
-              Les confirmations email sont prévues via Google Workspace dès que
-              le Web App Apps Script est configuré.
+              Pour le speed recruiting, préparez si possible vos besoins de
+              recrutement et les profils recherchés.
             </p>
           </div>
 
@@ -70,13 +70,15 @@ export function InfoSection() {
                 <Mail className="h-5 w-5 text-fim-orange" />
               </div>
               <div>
-                <p className="text-sm font-semibold">Contact à remplacer</p>
-                <p className="text-sm text-slate-200/70">inscription@fim.mg</p>
+                <p className="text-sm font-semibold">Contact inscription</p>
+                <p className="text-sm text-slate-200/70">
+                  heritiana.ratsimbazafy99@gmail.com
+                </p>
               </div>
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-200/75">
-              Ce bloc est prêt à accueillir vos coordonnées officielles, vos
-              mentions pratiques et un lien de support si nécessaire.
+              Pour toute question relative aux inscriptions ou à votre
+              participation, contactez l’équipe en charge du programme.
             </p>
           </div>
         </div>

@@ -21,15 +21,36 @@ export function ProgramSection({
     Session["dayKey"] | "Tous"
   >("Tous");
 
+  function getStartMinutes(time: string) {
+    const startTime = time.split(" - ")[0] ?? "00:00";
+    const [hours, minutes] = startTime.split(":").map(Number);
+    return hours * 60 + minutes;
+  }
+
   const dayFilters: Array<Session["dayKey"] | "Tous"> = [
     "Tous",
     ...Array.from(new Set(sessions.map((session) => session.dayKey))),
   ];
-  const visibleSessions = sessions.filter((session) => {
-    const typeMatch = activeType === "Toutes" || session.type === activeType;
-    const dayMatch = activeDay === "Tous" || session.dayKey === activeDay;
-    return typeMatch && dayMatch;
-  });
+  const visibleSessions = sessions
+    .filter((session) => {
+      const typeMatch = activeType === "Toutes" || session.type === activeType;
+      const dayMatch = activeDay === "Tous" || session.dayKey === activeDay;
+      return typeMatch && dayMatch;
+    })
+    .sort((left, right) => {
+      if (left.dateIso !== right.dateIso) {
+        return left.dateIso.localeCompare(right.dateIso);
+      }
+
+      const leftStart = getStartMinutes(left.time);
+      const rightStart = getStartMinutes(right.time);
+
+      if (leftStart !== rightStart) {
+        return leftStart - rightStart;
+      }
+
+      return left.title.localeCompare(right.title);
+    });
 
   return (
     <section id="programme" className="section-shell py-16 sm:py-20">
@@ -42,9 +63,8 @@ export function ProgramSection({
             Workshops, tables rondes et speed recruiting en un seul parcours.
           </h2>
           <p className="section-copy mt-5">
-            Le programme est volontairement très visuel pour faciliter la prise
-            de décision. Sélectionnez une session, laissez le formulaire se
-            préremplir et validez votre inscription sans friction.
+            Parcourez les sessions annoncées, filtrez par format ou par jour,
+            puis confirmez votre participation au créneau qui vous convient.
           </p>
         </div>
 
@@ -52,21 +72,21 @@ export function ProgramSection({
           <div className="flex items-center gap-3 text-fim-blue">
             <Sparkles className="h-5 w-5" />
             <p className="text-sm font-semibold uppercase tracking-[0.22em]">
-              Lecture rapide
+              À retenir
             </p>
           </div>
           <div className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
             <p>
               <span className="font-semibold text-slate-950">{sessions.length} sessions</span>{" "}
-              prêtes à être remplacées ou enrichies à partir de vos contenus finaux.
+              annoncées à ce jour pendant la FIM.
             </p>
             <p>
-              Les badges différencient immédiatement les trois formats
-              prioritaires du projet.
+              Les badges distinguent immédiatement les workshops, tables rondes
+              et créneaux de speed recruiting.
             </p>
             <p>
-              Chaque carte contient déjà les informations clés utiles au choix
-              et à l’inscription.
+              Sélectionnez un format, un jour, puis réservez votre participation
+              directement en ligne.
             </p>
           </div>
         </div>
