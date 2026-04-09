@@ -9,7 +9,7 @@ const infoCards = [
   {
     icon: Ticket,
     title: "Participation",
-    copy: "L’inscription est recommandée pour faciliter l’accueil et anticiper les sessions à capacité limitée.",
+    copy: "L’inscription est recommandée pour faciliter l’accueil, même si l’accès aux ateliers, conférences et tables rondes est gratuit après votre entrée à la FIM.",
   },
   {
     icon: ShieldCheck,
@@ -31,8 +31,8 @@ export function InfoSection() {
           </h2>
           <p className="section-copy mt-5">
             Retrouvez ici les repères utiles avant votre venue pour profiter
-            pleinement des workshops, tables rondes et créneaux de speed
-            recruiting proposés pendant la FIM.
+            pleinement des ateliers, conférences, tables rondes et créneaux de
+            speed recruiting proposés pendant la FIM.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">

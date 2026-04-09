@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Inscription Workshops & Tables Rondes FIM",
+  title: "Inscription Ateliers, Conférences & Tables Rondes FIM",
   description:
-    "Landing page d'inscription moderne pour les workshops, tables rondes et speed recruiting de la Foire Internationale de Madagascar.",
+    "Landing page d'inscription moderne pour les ateliers, conférences, tables rondes et speed recruiting de la Foire Internationale de Madagascar.",
 };
 
 export default function RootLayout({

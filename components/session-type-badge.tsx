@@ -1,8 +1,10 @@
 import type { SessionType } from "@/lib/types";
 
 const badgeStyles: Record<SessionType, string> = {
-  Workshop:
+  Atelier:
     "border-orange-200 bg-orange-50 text-orange-700 shadow-sm shadow-orange-100/50",
+  Conférence:
+    "border-violet-200 bg-violet-50 text-violet-700 shadow-sm shadow-violet-100/50",
   "Table ronde":
     "border-sky-200 bg-sky-50 text-sky-700 shadow-sm shadow-sky-100/50",
   "Speed recruiting":
@@ -21,4 +23,3 @@ export function SessionTypeBadge({ type }: { type: SessionType }) {
     </span>
   );
 }
-

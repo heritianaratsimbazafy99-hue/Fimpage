@@ -1,4 +1,8 @@
-export type SessionType = "Workshop" | "Table ronde" | "Speed recruiting";
+export type SessionType =
+  | "Atelier"
+  | "Conférence"
+  | "Table ronde"
+  | "Speed recruiting";
 
 export interface Session {
   id: string;
@@ -61,4 +65,3 @@ export interface SubmissionResult {
 }
 
 export type RegistrationErrors = Partial<Record<keyof RegistrationFormValues, string>>;
-

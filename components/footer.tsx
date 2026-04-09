@@ -10,9 +10,9 @@ export function Footer() {
               FIM 2026
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-7">
-              Inscriptions officielles aux workshops, tables rondes et créneaux
-              de speed recruiting proposés pendant la Foire Internationale de
-              Madagascar à la CCI Ivato.
+              Inscriptions officielles aux ateliers, conférences, tables rondes
+              et créneaux de speed recruiting proposés pendant la Foire
+              Internationale de Madagascar à la CCI Ivato.
             </p>
             <BrandLockup compact tone="light" className="mt-6 max-w-2xl" />
           </div>

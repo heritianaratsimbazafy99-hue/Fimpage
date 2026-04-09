@@ -32,10 +32,7 @@ export function BrandLockup({
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
         <div className="min-w-0 flex-1 rounded-[1.4rem] border border-slate-200 bg-white px-4 py-3 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
-            Identité officielle
-          </p>
-          <div className="mt-3">
+          <div>
             <Image
               src="/images/logos/fim-logo.png"
               alt="Logo FIM - Foire Internationale de Madagascar"
@@ -53,10 +50,7 @@ export function BrandLockup({
         <div className="hidden h-16 w-px shrink-0 bg-white/20 sm:block" />
 
         <div className="min-w-0 flex-1 rounded-[1.4rem] border border-slate-200 bg-white px-4 py-3 shadow-[0_10px_25px_rgba(15,23,42,0.08)] sm:max-w-[220px]">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
-            Organisation
-          </p>
-          <div className="mt-3 flex items-center">
+          <div className="flex items-center">
             <Image
               src="/images/logos/madavision-logo.png"
               alt="Logo Mada Vision"

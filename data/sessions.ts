@@ -68,7 +68,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-du-champ-export",
     slug: "du-champ-a-lexport-une-vision-unifiee-du-commerce",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Jeudi",
     dayLabel: "Jeudi 7 mai 2026",
     dateIso: "2026-05-07",
@@ -84,7 +84,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-echanges-opportunites",
     slug: "faciliter-les-echanges-pour-plus-d-opportunites",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
@@ -100,7 +100,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-acces-energie",
     slug: "acces-a-lenergie",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
@@ -116,7 +116,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-concurrence-loyale",
     slug: "concurrence-loyale-proteger-les-consommateurs",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
@@ -132,14 +132,14 @@ export const sessions: Session[] = [
   {
     id: "workshop-croissance-inclusive",
     slug: "approche-integree-casser-les-silos-pour-creer-de-la-croissance-inclusive",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
     time: "11:30 - 12:30",
     title: "Approche intégrée : casser les silos pour créer de la croissance inclusive",
     description:
-      "Un workshop sur la coopération entre acteurs, la circulation des expertises et la création d’impact durable.",
+      "Une conférence sur la coopération entre acteurs, la circulation des expertises et la création d’impact durable.",
     location: "Petite salle",
     host: "PIC",
     audience: "Décideurs, entreprises, partenaires au développement",
@@ -148,7 +148,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-qualite-madagascar",
     slug: "qualite-madagascar-produire-mieux-vendre-plus",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
@@ -164,7 +164,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-valorisation-expertise",
     slug: "valorisation-professionnelle-et-partage-dexpertise",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
@@ -244,7 +244,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-immobilier",
     slug: "immobilier",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Samedi",
     dayLabel: "Samedi 9 mai 2026",
     dateIso: "2026-05-09",
@@ -292,14 +292,14 @@ export const sessions: Session[] = [
   {
     id: "workshop-eau-filtration",
     slug: "leau-ses-enjeux-et-la-filtration-made-in-mada",
-    type: "Workshop",
+    type: "Conférence",
     dayKey: "Samedi",
     dayLabel: "Samedi 9 mai 2026",
     dateIso: "2026-05-09",
     time: "14:00 - 15:00",
     title: "L’eau, ses enjeux et la filtration made in Mada",
     description:
-      "Un workshop sur les enjeux liés à l’eau et les solutions locales de filtration développées à Madagascar.",
+      "Une conférence sur les enjeux liés à l’eau et les solutions locales de filtration développées à Madagascar.",
     location: "Petite salle",
     host: "Watergate",
     audience: "Professionnels, collectivités, visiteurs intéressés",
@@ -324,7 +324,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-smilebox-3d",
     slug: "impression-3d-realisation-de-pieces-techniques",
-    type: "Workshop",
+    type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
@@ -340,14 +340,14 @@ export const sessions: Session[] = [
   {
     id: "workshop-smilebox-arbre-vie",
     slug: "atelier-developpement-personnel-arbre-de-vie",
-    type: "Workshop",
+    type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
     time: "10:15 - 11:15",
     title: "Smilebox Academy : Atelier développement personnel - Arbre de vie",
     description:
-      "Un workshop guidé pour explorer ses motivations, clarifier sa trajectoire et mettre en perspective son évolution.",
+      "Un atelier guidé pour explorer ses motivations, clarifier sa trajectoire et mettre en perspective son évolution.",
     location: "Smilebox Academy",
     host: "Smilebox",
     audience: "Visiteurs, jeunes talents, professionnels",
@@ -356,7 +356,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-smilebox-prototypage",
     slug: "impression-3d-benefices-du-prototypage",
-    type: "Workshop",
+    type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
@@ -372,7 +372,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-smilebox-commercial",
     slug: "bonnes-pratiques-de-developpement-commercial",
-    type: "Workshop",
+    type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
@@ -388,7 +388,7 @@ export const sessions: Session[] = [
   {
     id: "workshop-smilebox-decoration",
     slug: "impression-3d-realisation-de-decorations-dinterieur",
-    type: "Workshop",
+    type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",

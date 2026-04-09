@@ -351,7 +351,8 @@ export function RegistrationForm({
                     name="typeSession"
                   >
                     <option value="">Choisir un format</option>
-                    <option value="Workshop">Workshop</option>
+                    <option value="Atelier">Atelier</option>
+                    <option value="Conférence">Conférence</option>
                     <option value="Table ronde">Table ronde</option>
                     <option value="Speed recruiting">Speed recruiting</option>
                   </select>

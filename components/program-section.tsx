@@ -60,7 +60,7 @@ export function ProgramSection({
             Programme
           </span>
           <h2 className="section-title mt-5">
-            Workshops, tables rondes et speed recruiting en un seul parcours.
+            Ateliers, conférences, tables rondes et speed recruiting en un seul parcours.
           </h2>
           <p className="section-copy mt-5">
             Parcourez les sessions annoncées, filtrez par format ou par jour,
@@ -81,8 +81,8 @@ export function ProgramSection({
               annoncées à ce jour pendant la FIM.
             </p>
             <p>
-              Les badges distinguent immédiatement les workshops, tables rondes
-              et créneaux de speed recruiting.
+              Les badges distinguent immédiatement les ateliers, conférences,
+              tables rondes et créneaux de speed recruiting.
             </p>
             <p>
               Sélectionnez un format, un jour, puis réservez votre participation
@@ -102,7 +102,9 @@ export function ProgramSection({
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {(["Toutes", "Workshop", "Table ronde", "Speed recruiting"] as const).map(
+            {(
+              ["Toutes", "Atelier", "Conférence", "Table ronde", "Speed recruiting"] as const
+            ).map(
               (value) => (
                 <button
                   key={value}

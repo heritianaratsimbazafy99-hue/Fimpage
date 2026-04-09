@@ -44,7 +44,7 @@ export function HeroSection({
             Information participation
           </p>
           <p className="mt-1 text-sm leading-6 text-white/90 sm:text-[0.96rem]">
-            La participation aux workshops et aux tables rondes est
+            La participation aux ateliers, aux conférences et aux tables rondes est
             <span className="font-semibold text-white"> gratuite</span> une
             fois votre entrée à la FIM effectuée.
           </p>
@@ -73,7 +73,7 @@ export function HeroSection({
             </span>
 
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] text-white sm:text-5xl lg:text-7xl">
-              Inscription Workshops &amp; Tables Rondes FIM
+              Inscription Ateliers, Conférences &amp; Tables Rondes FIM
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-100/90 sm:text-xl">
@@ -99,7 +99,7 @@ export function HeroSection({
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {[
                 { value: "4 jours", label: "d’animations business et inspiration" },
-                { value: "3 formats", label: "workshops, tables rondes, speed recruiting" },
+                { value: "4 formats", label: "ateliers, conférences, tables rondes, speed recruiting" },
                 { value: "Places limitées", label: "inscription conseillée selon les sessions" },
               ].map((item) => (
                 <div
@@ -133,7 +133,7 @@ export function HeroSection({
                   <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-100/80">
                     <li>Sessions ouvertes pendant la FIM du 7 au 10 mai 2026 à la CCI Ivato.</li>
                     <li>Inscriptions accessibles aux visiteurs, exposants et recruteurs.</li>
-                    <li>Workshops et tables rondes gratuits après votre entrée à la FIM.</li>
+                    <li>Ateliers, conférences et tables rondes gratuits après votre entrée à la FIM.</li>
                     <li>Confirmation envoyée par email après validation de votre demande.</li>
                   </ul>
                 </div>
@@ -144,7 +144,7 @@ export function HeroSection({
                       Au programme
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Workshops, tables rondes et speed recruiting
+                      Ateliers, conférences, tables rondes et speed recruiting
                     </p>
                   </div>
                   <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
@@ -152,7 +152,7 @@ export function HeroSection({
                       Participation
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Workshops et tables rondes gratuits après entrée à la FIM
+                      Ateliers, conférences et tables rondes gratuits après entrée à la FIM
                     </p>
                   </div>
                 </div>

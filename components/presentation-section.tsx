@@ -32,12 +32,12 @@ export function PresentationSection() {
               Préparez votre venue et réservez les sessions qui vous intéressent.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200/80">
-              Pendant la FIM, plusieurs espaces accueilleront des workshops, des
-              tables rondes et des temps de speed recruiting. Certaines sessions
-              s’adressent au grand public professionnel, d’autres sont
-              particulièrement utiles aux exposants, recruteurs et partenaires.
-              L’inscription permet d’organiser l’accueil et de vous confirmer
-              votre participation dans les meilleures conditions.
+              Pendant la FIM, plusieurs espaces accueilleront des ateliers, des
+              conférences, des tables rondes et des temps de speed recruiting.
+              Certaines sessions s’adressent au grand public professionnel,
+              d’autres sont particulièrement utiles aux exposants, recruteurs
+              et partenaires. L’inscription permet d’organiser l’accueil et de
+              vous confirmer votre participation dans les meilleures conditions.
             </p>
           </div>
 
