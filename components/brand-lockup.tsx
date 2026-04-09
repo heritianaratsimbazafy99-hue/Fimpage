@@ -19,7 +19,7 @@ export function BrandLockup({
 }: BrandLockupProps) {
   const wrapperClasses =
     tone === "hero"
-      ? "border border-white/10 bg-white/94 shadow-[0_18px_50px_rgba(15,23,42,0.16)]"
+      ? "border border-white/12 bg-white/12 shadow-[0_18px_50px_rgba(15,23,42,0.16)]"
       : "border border-slate-200 bg-slate-50/95 shadow-[0_18px_50px_rgba(15,23,42,0.08)]";
 
   return (
@@ -31,7 +31,7 @@ export function BrandLockup({
       )}
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0 flex-1 rounded-[1.4rem] border border-slate-200 bg-white px-4 py-3 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
             Identité officielle
           </p>
@@ -50,9 +50,9 @@ export function BrandLockup({
           </div>
         </div>
 
-        <div className="hidden h-16 w-px shrink-0 bg-slate-200 sm:block" />
+        <div className="hidden h-16 w-px shrink-0 bg-white/20 sm:block" />
 
-        <div className="min-w-0 flex-1 sm:max-w-[220px]">
+        <div className="min-w-0 flex-1 rounded-[1.4rem] border border-slate-200 bg-white px-4 py-3 shadow-[0_10px_25px_rgba(15,23,42,0.08)] sm:max-w-[220px]">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
             Organisation
           </p>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, CalendarDays, Sparkles } from "lucide-react";
+import { ArrowDown, CalendarDays, Sparkles, Ticket } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { CTAButton } from "@/components/cta-button";
 
@@ -32,6 +32,22 @@ export function HeroSection({
               FAQ
             </CTAButton>
           </nav>
+        </div>
+      </div>
+
+      <div className="mb-5 flex items-start gap-3 rounded-[1.75rem] border border-fim-orange/25 bg-gradient-to-r from-fim-orange/18 via-white/8 to-transparent px-4 py-4 text-sm text-white/90 shadow-[0_18px_50px_rgba(15,23,42,0.12)] backdrop-blur sm:items-center sm:px-5">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/14 text-fim-orange">
+          <Ticket className="h-5 w-5" />
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-fim-mist/85">
+            Information participation
+          </p>
+          <p className="mt-1 text-sm leading-6 text-white/90 sm:text-[0.96rem]">
+            La participation aux workshops et aux tables rondes est
+            <span className="font-semibold text-white"> gratuite</span> une
+            fois votre entrée à la FIM effectuée.
+          </p>
         </div>
       </div>
 
@@ -117,6 +133,7 @@ export function HeroSection({
                   <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-100/80">
                     <li>Sessions ouvertes pendant la FIM du 7 au 10 mai 2026 à la CCI Ivato.</li>
                     <li>Inscriptions accessibles aux visiteurs, exposants et recruteurs.</li>
+                    <li>Workshops et tables rondes gratuits après votre entrée à la FIM.</li>
                     <li>Confirmation envoyée par email après validation de votre demande.</li>
                   </ul>
                 </div>
@@ -135,7 +152,7 @@ export function HeroSection({
                       Participation
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Réservation recommandée selon les places disponibles
+                      Workshops et tables rondes gratuits après entrée à la FIM
                     </p>
                   </div>
                 </div>
