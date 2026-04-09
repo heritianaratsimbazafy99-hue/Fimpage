@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowDown, CalendarDays, Sparkles } from "lucide-react";
+import { BrandLockup } from "@/components/brand-lockup";
 import { CTAButton } from "@/components/cta-button";
 
 type HeroSectionProps = {
@@ -13,32 +14,25 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="section-shell pb-8 pt-6 sm:pb-10 sm:pt-8">
-      <div className="mb-5 flex flex-col gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-4 text-sm text-white/80 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-black text-fim-blue">
-            FIM
-          </div>
-          <div>
-            <p className="text-base font-semibold text-white">
-              Foire Internationale de Madagascar
-            </p>
-            <p className="text-xs uppercase tracking-[0.24em] text-white/60">
-              inscription.fim.mg
-            </p>
-          </div>
-        </div>
+      <div className="mb-5 flex flex-col gap-4 rounded-[2rem] border border-white/10 bg-white/5 p-3 text-sm text-white/80 backdrop-blur lg:flex-row lg:items-center lg:justify-between lg:p-4">
+        <BrandLockup priority className="lg:max-w-[42rem]" />
 
-        <nav className="flex flex-wrap gap-2 text-sm">
-          <CTAButton href="#programme" variant="secondary" size="md">
-            Programme
-          </CTAButton>
-          <CTAButton href="#inscription" variant="secondary" size="md">
-            Inscription
-          </CTAButton>
-          <CTAButton href="#faq" variant="secondary" size="md">
-            FAQ
-          </CTAButton>
-        </nav>
+        <div className="flex flex-col gap-3 lg:items-end">
+          <p className="px-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/60">
+            Plateforme officielle d&apos;inscription
+          </p>
+          <nav className="flex flex-wrap gap-2 text-sm">
+            <CTAButton href="#programme" variant="secondary" size="md">
+              Programme
+            </CTAButton>
+            <CTAButton href="#inscription" variant="secondary" size="md">
+              Inscription
+            </CTAButton>
+            <CTAButton href="#faq" variant="secondary" size="md">
+              FAQ
+            </CTAButton>
+          </nav>
+        </div>
       </div>
 
       <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-fim-ink shadow-spotlight">
