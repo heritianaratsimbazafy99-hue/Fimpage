@@ -2,9 +2,9 @@ var SPREADSHEET_ID = "REPLACE_WITH_SPREADSHEET_ID";
 var SHEET_NAME = "Inscriptions";
 var EVENT_NAME = "FIM 2026";
 var EVENT_LOCATION = "CCI Ivato, Antananarivo";
-var SUPPORT_EMAIL = "inscription@fim.mg";
-var SPEED_RECRUITING_CONTACT_EMAIL = "recrutement@fim.mg";
-var ADMIN_NOTIFICATION_EMAILS = [SUPPORT_EMAIL];
+var SUPPORT_EMAIL = "contact@mada-vision.com";
+var SPEED_RECRUITING_CONTACT_EMAIL = "contact@mada-vision.com";
+var ADMIN_NOTIFICATION_EMAILS = ["contact@mada-vision.com"];
 
 var SHEET_HEADERS = [
   "Timestamp",

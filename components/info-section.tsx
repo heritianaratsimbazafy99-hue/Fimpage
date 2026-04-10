@@ -72,7 +72,7 @@ export function InfoSection() {
               <div>
                 <p className="text-sm font-semibold">Contact inscription</p>
                 <p className="text-sm text-slate-200/70">
-                  heritiana.ratsimbazafy99@gmail.com
+                  contact@mada-vision.com
                 </p>
               </div>
             </div>

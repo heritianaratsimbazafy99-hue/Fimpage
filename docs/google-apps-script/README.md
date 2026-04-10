@@ -14,6 +14,13 @@ Ce dossier contient un exemple complet de Web App Google Apps Script à brancher
    - `SUPPORT_EMAIL`
    - `SPEED_RECRUITING_CONTACT_EMAIL`
    - `ADMIN_NOTIFICATION_EMAILS`
+
+Exemple de configuration :
+```javascript
+var SUPPORT_EMAIL = "contact@mada-vision.com";
+var SPEED_RECRUITING_CONTACT_EMAIL = "contact@mada-vision.com";
+var ADMIN_NOTIFICATION_EMAILS = ["contact@mada-vision.com"];
+```
 6. Déployez le script en tant que `Web app`.
 7. Choisissez `Exécuter en tant que : Moi`.
 8. Choisissez `Qui a accès : Toute personne disposant du lien`.
@@ -57,7 +64,7 @@ Le script initialise la feuille avec les colonnes suivantes :
 - Remplacez les emails de contact par les bonnes adresses FIM.
 - Les notifications administrateur partent via `ADMIN_NOTIFICATION_EMAILS`.
 - Pour une seule adresse admin, utilisez par exemple :
-  `var ADMIN_NOTIFICATION_EMAILS = ["contact@fim.mg"];`
+  `var ADMIN_NOTIFICATION_EMAILS = ["contact@mada-vision.com"];`
 - Pour plusieurs administrateurs :
-  `var ADMIN_NOTIFICATION_EMAILS = ["contact@fim.mg", "rh@fim.mg"];`
+  `var ADMIN_NOTIFICATION_EMAILS = ["contact@mada-vision.com", "rh@mada-vision.com"];`
 - Ajoutez ensuite un traitement QR/check-in en réutilisant `registrationId`.

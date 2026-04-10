@@ -25,10 +25,10 @@ export function Footer() {
               Inscription
             </a>
             <a
-              href="mailto:heritiana.ratsimbazafy99@gmail.com"
+              href="mailto:contact@mada-vision.com"
               className="transition hover:text-fim-blue"
             >
-              heritiana.ratsimbazafy99@gmail.com
+              contact@mada-vision.com
             </a>
           </div>
         </div>
