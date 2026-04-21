@@ -92,9 +92,25 @@ export const sessions: Session[] = [
     title: "Faciliter les échanges pour plus d’opportunités",
     description:
       "Une session dédiée aux passerelles concrètes entre acteurs économiques, institutions et opportunités de marché.",
-    location: "Grande salle",
+    location: "Petite salle",
     host: "MinCC / ANMCC",
     audience: "Visiteurs professionnels, exposants, partenaires",
+    capacityNote: "Inscription recommandée",
+  },
+  {
+    id: "conference-achat-credit-sav",
+    slug: "achat-a-credit-et-sav",
+    type: "Conférence",
+    dayKey: "Vendredi",
+    dayLabel: "Vendredi 8 mai 2026",
+    dateIso: "2026-05-08",
+    time: "10:15 - 11:15",
+    title: "Achat à crédit et SAV",
+    description:
+      "Une conférence dédiée aux enjeux du crédit à la consommation, au parcours client et à l’importance du service après-vente.",
+    location: "Grande salle",
+    host: "NAZA ELECTRONIC",
+    audience: "Consommateurs, distributeurs, professionnels du retail",
     capacityNote: "Inscription recommandée",
   },
   {
@@ -194,6 +210,22 @@ export const sessions: Session[] = [
     capacityNote: "Places limitées, inscription recommandée",
   },
   {
+    id: "conference-odyssee-urbaine-2030",
+    slug: "odyssee-urbaine-2030",
+    type: "Conférence",
+    dayKey: "Vendredi",
+    dayLabel: "Vendredi 8 mai 2026",
+    dateIso: "2026-05-08",
+    time: "15:15 - 16:15",
+    title: "Odyssée urbaine 2030",
+    description:
+      "Une conférence sur les perspectives urbaines à horizon 2030, les usages de la lumière et les nouvelles approches d’aménagement.",
+    location: "Petite salle",
+    host: "Ambiance éclairage",
+    audience: "Architectes, aménageurs, professionnels du bâtiment, visiteurs intéressés",
+    capacityNote: "Inscription recommandée",
+  },
+  {
     id: "speed-recruiting-0900",
     slug: "speed-recruiting-creneau-0900",
     type: "Speed recruiting",
@@ -255,6 +287,23 @@ export const sessions: Session[] = [
     location: "Grande salle",
     host: "Master Immo",
     audience: "Professionnels, investisseurs, visiteurs intéressés",
+    capacityNote: "Inscription recommandée",
+  },
+  {
+    id: "conference-fifatec-communication-securite",
+    slug: "solutions-innovantes-communication-securite-entreprises",
+    type: "Conférence",
+    dayKey: "Samedi",
+    dayLabel: "Samedi 9 mai 2026",
+    dateIso: "2026-05-09",
+    time: "11:30 - 12:30",
+    title:
+      "Adoptez des solutions innovantes pour renforcer la communication et la sécurité des entreprises",
+    description:
+      "Une conférence sur les solutions technologiques permettant d’améliorer la communication interne, la sûreté et la continuité d’activité des entreprises.",
+    location: "Petite salle",
+    host: "FIFATEC",
+    audience: "Entreprises, responsables IT, dirigeants, responsables sécurité",
     capacityNote: "Inscription recommandée",
   },
   {
