@@ -152,7 +152,7 @@ export const sessions: Session[] = [
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
-    time: "09:00 - 10:00",
+    time: "09:00 - 10:20",
     title: "Bien-être au quotidien et en milieu du travail",
     description:
       "Une table ronde consacrée au bien-être au travail, aux habitudes de vie et aux leviers d’épanouissement durable en entreprise.",
@@ -168,7 +168,7 @@ export const sessions: Session[] = [
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
-    time: "09:00 - 10:00",
+    time: "09:00 - 10:20",
     title: "Bien-être au quotidien et en milieu du travail",
     description:
       "Une table ronde consacrée au bien-être au travail, aux habitudes de vie et aux leviers d’épanouissement durable en entreprise.",
@@ -184,7 +184,7 @@ export const sessions: Session[] = [
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
-    time: "09:00 - 10:00",
+    time: "09:00 - 10:20",
     title: "Bien-être au quotidien et en milieu du travail",
     description:
       "Une table ronde consacrée au bien-être au travail, aux habitudes de vie et aux leviers d’épanouissement durable en entreprise.",
@@ -200,7 +200,7 @@ export const sessions: Session[] = [
     dayKey: "Vendredi",
     dayLabel: "Vendredi 8 mai 2026",
     dateIso: "2026-05-08",
-    time: "09:00 - 10:00",
+    time: "09:00 - 10:20",
     title: "Bien-être au quotidien et en milieu du travail",
     description:
       "Une table ronde consacrée au bien-être au travail, aux habitudes de vie et aux leviers d’épanouissement durable en entreprise.",
