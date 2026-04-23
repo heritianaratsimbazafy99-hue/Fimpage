@@ -13,7 +13,7 @@ export const sessions: Session[] = [
     description:
       "Une table ronde consacrée aux leviers de compétitivité, à la structuration de l’offre locale et aux conditions de marché.",
     location: "RUBIS · Table ronde 1",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Entreprises, institutions, organisations professionnelles",
     capacityNote: "Places limitées, inscription recommandée",
   },
@@ -29,7 +29,7 @@ export const sessions: Session[] = [
     description:
       "Un échange sur la valeur du label, la confiance accordée par le marché et les attentes des consommateurs.",
     location: "RUBIS · Table ronde 2",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Marques, distributeurs, producteurs, institutionnels",
     capacityNote: "Places limitées, inscription recommandée",
   },
@@ -45,7 +45,7 @@ export const sessions: Session[] = [
     description:
       "Une discussion sur les filières à fort potentiel, les perspectives de croissance et l’ouverture à de nouveaux marchés.",
     location: "RUBIS · Table ronde 4",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Exportateurs, investisseurs, acteurs des filières",
     capacityNote: "Places limitées, inscription recommandée",
   },
@@ -61,41 +61,9 @@ export const sessions: Session[] = [
     description:
       "Un débat sur les mécanismes de régulation, leurs effets concrets et les pistes d’équilibre pour les acteurs économiques.",
     location: "RUBIS · Table ronde 3",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Décideurs publics, opérateurs économiques, organisations sectorielles",
     capacityNote: "Places limitées, inscription recommandée",
-  },
-  {
-    id: "conference-agro-industrie-filieres-locales",
-    slug: "agro-industrie-et-filieres-locales",
-    type: "Conférence",
-    dayKey: "Jeudi",
-    dayLabel: "Jeudi 7 mai 2026",
-    dateIso: "2026-05-07",
-    time: "12:45 - 13:45",
-    title: "L’agro-industrie et les filières locales",
-    description:
-      "Une conférence consacrée à la transformation locale, à la structuration des filières et aux leviers de valorisation de l’agro-industrie malgache.",
-    location: "SAPHIR",
-    host: "Association Agro-Industrie de Madagascar",
-    audience: "Producteurs, transformateurs, entrepreneurs, institutions",
-    capacityNote: "Inscription recommandée",
-  },
-  {
-    id: "workshop-du-champ-export",
-    slug: "du-champ-a-lexport-une-vision-unifiee-du-commerce",
-    type: "Conférence",
-    dayKey: "Jeudi",
-    dayLabel: "Jeudi 7 mai 2026",
-    dateIso: "2026-05-07",
-    time: "14:00 - 15:00",
-    title: "Du champ à l’export : une vision unifiée du commerce",
-    description:
-      "Une session pour relier production, commerce et export autour d’une même dynamique de performance.",
-    location: "EMERAUDE",
-    host: "MinCC",
-    audience: "Entrepreneurs, exportateurs, porteurs de projets",
-    capacityNote: "Inscription recommandée",
   },
   {
     id: "conference-relance-economique",
@@ -109,7 +77,7 @@ export const sessions: Session[] = [
     description:
       "Une conférence sur les leviers de relance, les priorités économiques et les perspectives de redynamisation des activités.",
     location: "SAPHIR",
-    host: "MEF",
+    host: "Ministère de l’Économie et des Finances",
     audience: "Entreprises, décideurs, investisseurs, partenaires institutionnels",
     capacityNote: "Inscription recommandée",
   },
@@ -125,7 +93,8 @@ export const sessions: Session[] = [
     description:
       "Une session dédiée aux passerelles concrètes entre acteurs économiques, institutions et opportunités de marché.",
     location: "SAPHIR",
-    host: "MinCC / ANMCC",
+    host:
+      "Ministère du Commerce et de la Consommation / Autorité Nationale chargée des Mesures Correctives Commerciales",
     audience: "Visiteurs professionnels, exposants, partenaires",
     capacityNote: "Inscription recommandée",
   },
@@ -221,7 +190,7 @@ export const sessions: Session[] = [
     description:
       "Une rencontre sur les équilibres à trouver entre protection du consommateur, régulation et développement du secteur privé.",
     location: "EMERAUDE",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Institutions, entreprises, consommateurs, médias",
     capacityNote: "Inscription recommandée",
   },
@@ -237,7 +206,7 @@ export const sessions: Session[] = [
     description:
       "Une conférence sur la coopération entre acteurs, la circulation des expertises et la création d’impact durable.",
     location: "SAPHIR",
-    host: "PIC",
+    host: "Pôles Intégrés de Croissance",
     audience: "Décideurs, entreprises, partenaires au développement",
     capacityNote: "Inscription recommandée",
   },
@@ -253,7 +222,7 @@ export const sessions: Session[] = [
     description:
       "Une conférence sur la qualité comme moteur de compétitivité nationale, de confiance marché et de valorisation des productions malgaches.",
     location: "SAPHIR",
-    host: "MinCC",
+    host: "Ministère du Commerce et de la Consommation",
     audience: "Producteurs, entrepreneurs, exposants, acteurs institutionnels",
     capacityNote: "Inscription recommandée",
   },
