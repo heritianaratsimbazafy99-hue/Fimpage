@@ -441,7 +441,7 @@ export const sessions: Session[] = [
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
-    time: "10:15 - 11:15",
+    time: "10:15 - 12:30",
     title: "Smilebox Academy : Atelier développement personnel - Arbre de vie",
     description:
       "Un atelier guidé pour explorer ses motivations, clarifier sa trajectoire et mettre en perspective son évolution.",
