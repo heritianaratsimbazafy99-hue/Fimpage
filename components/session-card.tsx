@@ -52,6 +52,12 @@ export function SessionCard({
 
       <div className="mt-6 rounded-3xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
         <p className="font-semibold text-slate-950">{session.host}</p>
+        {session.speaker ? (
+          <p className="mt-1 leading-6">
+            <span className="font-medium text-slate-950">Intervenant(s) :</span>{" "}
+            {session.speaker}
+          </p>
+        ) : null}
         <p className="mt-1">{session.capacityNote}</p>
       </div>
 
@@ -68,4 +74,3 @@ export function SessionCard({
     </article>
   );
 }
-

@@ -16,6 +16,7 @@ export interface Session {
   description: string;
   location: string;
   host: string;
+  speaker?: string;
   audience: string;
   capacityNote: string;
 }
