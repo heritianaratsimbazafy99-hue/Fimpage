@@ -35,6 +35,17 @@ export function SessionCard({
 
       <p className="mt-4 text-sm leading-7 text-slate-600">{session.description}</p>
 
+      {session.details?.length ? (
+        <div className="mt-4 rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600">
+          <p className="font-semibold text-slate-950">Détails</p>
+          <ul className="mt-2 space-y-2 leading-6">
+            {session.details.map((detail) => (
+              <li key={detail}>{detail}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
       <div className="mt-6 grid gap-3 text-sm text-slate-600">
         <div className="flex items-start gap-3">
           <CalendarDays className="mt-0.5 h-4 w-4 text-fim-orange" />
