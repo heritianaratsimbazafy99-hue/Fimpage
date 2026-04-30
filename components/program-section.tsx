@@ -78,7 +78,7 @@ export function ProgramSection({
           <div className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
             <p>
               <span className="font-semibold text-slate-950">{sessions.length} sessions</span>{" "}
-              annoncées à ce jour pendant la FIM.
+              annoncées à ce jour pendant la Foire Internationale de Madagascar.
             </p>
             <p>
               Les badges distinguent immédiatement les ateliers, conférences,

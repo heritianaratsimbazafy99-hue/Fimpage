@@ -35,7 +35,7 @@ export function BrandLockup({
           <div>
             <Image
               src="/images/logos/fim-logo.png"
-              alt="Logo FIM - Foire Internationale de Madagascar"
+              alt="Logo de la Foire Internationale de Madagascar"
               width={compact ? 250 : 320}
               height={compact ? 105 : 135}
               priority={priority}

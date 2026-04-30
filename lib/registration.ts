@@ -98,7 +98,8 @@ export function validateRegistrationForm(
 
     if (values.chercheUnPoste === "Oui") {
       if (!values.cvATransmettre) {
-        errors.cvATransmettre = "Merci d'indiquer si vous avez un CV à transmettre.";
+        errors.cvATransmettre =
+          "Merci d'indiquer si vous avez un curriculum vitae à transmettre.";
       }
       if (!values.postesCherchesVisiteur.trim()) {
         errors.postesCherchesVisiteur = "Précisez les postes que vous recherchez.";
@@ -192,7 +193,7 @@ export async function submitRegistration(
 
   return {
     success: true,
-    registrationId: parsedResponse.registrationId ?? `FIM-${Date.now()}`,
+    registrationId: parsedResponse.registrationId ?? `INSCRIPTION-${Date.now()}`,
     message:
       parsedResponse.message ??
       "Votre inscription a bien été enregistrée. Un email de confirmation va vous être envoyé.",

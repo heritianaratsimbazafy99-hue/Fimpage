@@ -101,8 +101,8 @@ export function RegistrationForm({
     : "Entreprise / structure";
   const fonctionLabel = isSpeedRecruitingVisitor ? "Fonction / profil" : "Fonction";
   const fonctionPlaceholder = isSpeedRecruitingVisitor
-    ? "Ex. Commercial, étudiant, technicien"
-    : "Ex. Responsable RH";
+    ? "Par exemple : Commercial, étudiant, technicien"
+    : "Par exemple : Responsable des ressources humaines";
 
   function updateField<Key extends keyof RegistrationFormValues>(
     field: Key,
@@ -522,7 +522,7 @@ export function RegistrationForm({
                           }
                           className={inputClasses}
                           name="postesRecherches"
-                          placeholder="Ex. commerciaux, techniciens, RH"
+                          placeholder="Par exemple : commerciaux, techniciens, ressources humaines"
                         />
                       </Field>
 
@@ -538,7 +538,7 @@ export function RegistrationForm({
                           }
                           className={inputClasses}
                           name="nombrePostes"
-                          placeholder="Ex. 3"
+                          placeholder="Par exemple : 3"
                         />
                       </Field>
 
@@ -555,7 +555,7 @@ export function RegistrationForm({
                             }
                             className={`${inputClasses} min-h-[120px] resize-y`}
                             name="profilRecherche"
-                            placeholder="Compétences, expérience, niveau, disponibilité, langues, etc."
+                            placeholder="Compétences, expérience, niveau, disponibilité, langues, mobilité"
                           />
                         </Field>
                       </div>
@@ -601,7 +601,7 @@ export function RegistrationForm({
                   {formValues.chercheUnPoste === "Oui" ? (
                     <>
                       <Field
-                        label="Avez-vous un CV à nous transmettre ?"
+                        label="Avez-vous un curriculum vitae à nous transmettre ?"
                         name="cvATransmettre"
                         error={errors.cvATransmettre}
                       >
@@ -634,7 +634,7 @@ export function RegistrationForm({
                           }
                           className={inputClasses}
                           name="postesCherchesVisiteur"
-                          placeholder="Ex. assistant commercial, comptable, technicien"
+                          placeholder="Par exemple : assistant commercial, comptable, technicien"
                         />
                       </Field>
                     </>
@@ -645,7 +645,7 @@ export function RegistrationForm({
                       label="Information complémentaire"
                       name="informationComplementaire"
                       error={errors.informationComplementaire}
-                      hint="Optionnel : disponibilité, secteur recherché, expérience, mobilité, langues, etc."
+                      hint="Optionnel : disponibilité, secteur recherché, expérience, mobilité, langues"
                     >
                       <textarea
                         value={formValues.informationComplementaire}

@@ -4,12 +4,12 @@ const infoCards = [
   {
     icon: MapPin,
     title: "Lieu",
-    copy: "CCI Ivato, Antananarivo. Le lieu précis de chaque session est rappelé sur sa carte programme.",
+    copy: "Centre de Conférences International Ivato, Antananarivo. Le lieu précis de chaque session est rappelé sur sa carte programme.",
   },
   {
     icon: Ticket,
     title: "Participation",
-    copy: "L’inscription est recommandée pour faciliter l’accueil, même si l’accès aux ateliers, conférences et tables rondes est gratuit après votre entrée à la FIM.",
+    copy: "L’inscription est recommandée pour faciliter l’accueil, même si l’accès aux ateliers, conférences et tables rondes est gratuit après votre entrée à la Foire Internationale de Madagascar.",
   },
   {
     icon: ShieldCheck,
@@ -32,7 +32,7 @@ export function InfoSection() {
           <p className="section-copy mt-5">
             Retrouvez ici les repères utiles avant votre venue pour profiter
             pleinement des ateliers, conférences, tables rondes et créneaux de
-            speed recruiting proposés pendant la FIM.
+            speed recruiting proposés pendant la Foire Internationale de Madagascar.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">

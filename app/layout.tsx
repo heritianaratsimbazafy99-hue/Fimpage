@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Inscription Ateliers, Conférences & Tables Rondes FIM",
+  title:
+    "Inscription Ateliers, Conférences et Tables Rondes de la Foire Internationale de Madagascar",
   description:
     "Landing page d'inscription moderne pour les ateliers, conférences, tables rondes et speed recruiting de la Foire Internationale de Madagascar.",
 };
