@@ -7,12 +7,12 @@ export function Footer() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-fim-blue">
-              Foire Internationale de Madagascar 2026
+              FIM 2026
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-7">
               Inscriptions officielles aux ateliers, conférences, tables rondes
               et créneaux de speed recruiting proposés pendant la Foire
-              Internationale de Madagascar au Centre de Conférences International Ivato.
+              Internationale de Madagascar à la CCI Ivato.
             </p>
             <BrandLockup compact tone="light" className="mt-6 max-w-2xl" />
           </div>

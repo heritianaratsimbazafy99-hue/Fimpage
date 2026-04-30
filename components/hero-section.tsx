@@ -29,7 +29,7 @@ export function HeroSection({
               Inscription
             </CTAButton>
             <CTAButton href="#faq" variant="secondary" size="md">
-              Questions
+              FAQ
             </CTAButton>
           </nav>
         </div>
@@ -46,7 +46,7 @@ export function HeroSection({
           <p className="mt-1 text-sm leading-6 text-white/90 sm:text-[0.96rem]">
             La participation aux ateliers, aux conférences et aux tables rondes est
             <span className="font-semibold text-white"> gratuite</span> une
-            fois votre entrée à la Foire Internationale de Madagascar effectuée.
+            fois votre entrée à la FIM effectuée.
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ export function HeroSection({
       <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-fim-ink shadow-spotlight">
         <Image
           src="/images/fim-poster.jpg"
-          alt="Affiche Foire Internationale de Madagascar 2026, Madagascar en mouvement"
+          alt="Affiche FIM 2026 Madagascar en mouvement"
           fill
           priority
           className="object-cover object-center opacity-30 mix-blend-screen"
@@ -69,11 +69,11 @@ export function HeroSection({
           <div className="flex flex-col justify-center">
             <span className="eyebrow mb-6 w-fit">
               <Sparkles className="h-4 w-4" />
-              Foire Internationale de Madagascar 2026 · Centre de Conférences International Ivato
+              FIM 2026 · CCI Ivato
             </span>
 
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] text-white sm:text-5xl lg:text-7xl">
-              Inscription aux Ateliers, Conférences et Tables Rondes de la Foire Internationale de Madagascar
+              Inscription Ateliers, Conférences et Tables Rondes FIM
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-100/90 sm:text-xl">
@@ -132,13 +132,11 @@ export function HeroSection({
                   </p>
                   <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-100/80">
                     <li>
-                      Sessions ouvertes pendant la Foire Internationale de Madagascar du 7 au
-                      10 mai 2026 au Centre de Conférences International Ivato.
+                      Sessions ouvertes pendant la FIM du 7 au 10 mai 2026 à la CCI Ivato.
                     </li>
                     <li>Inscriptions accessibles aux visiteurs, exposants et recruteurs.</li>
                     <li>
-                      Ateliers, conférences et tables rondes gratuits après votre entrée à la
-                      Foire Internationale de Madagascar.
+                      Ateliers, conférences et tables rondes gratuits après votre entrée à la FIM.
                     </li>
                     <li>Confirmation envoyée par email après validation de votre demande.</li>
                   </ul>
@@ -158,7 +156,7 @@ export function HeroSection({
                       Participation
                     </p>
                     <p className="mt-3 text-xl font-semibold text-white">
-                      Ateliers, conférences et tables rondes gratuits après entrée à la Foire Internationale de Madagascar
+                      Ateliers, conférences et tables rondes gratuits après entrée à la FIM
                     </p>
                   </div>
                 </div>
