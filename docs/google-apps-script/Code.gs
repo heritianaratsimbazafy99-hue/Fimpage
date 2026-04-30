@@ -25,6 +25,10 @@ var SHEET_HEADERS = [
   "Nombre de postes",
   "Profil recherché",
   "Fiche de poste à transmettre",
+  "Cherche un poste",
+  "CV à transmettre",
+  "Postes recherchés visiteur",
+  "Information complémentaire",
   "Présence",
   "Commentaire",
   "QR / check-in futur",
@@ -95,6 +99,10 @@ function parsePayload_(e) {
     nombrePostes: sanitizeString_(payload.nombrePostes),
     profilRecherche: sanitizeString_(payload.profilRecherche),
     fichePoste: sanitizeString_(payload.fichePoste),
+    chercheUnPoste: sanitizeString_(payload.chercheUnPoste),
+    cvATransmettre: sanitizeString_(payload.cvATransmettre),
+    postesCherchesVisiteur: sanitizeString_(payload.postesCherchesVisiteur),
+    informationComplementaire: sanitizeString_(payload.informationComplementaire),
     source: sanitizeString_(payload.source),
   };
 }
@@ -125,15 +133,45 @@ function validatePayload_(payload) {
     throw new Error("L'adresse email fournie n'est pas valide.");
   }
 
-  if (payload.typeSession === "Speed recruiting" && !payload.souhaiteRecruter) {
+  if (
+    payload.typeSession === "Speed recruiting" &&
+    payload.typeParticipant === "Exposant" &&
+    !payload.souhaiteRecruter
+  ) {
     throw new Error("Le champ 'Souhaitez-vous recruter ?' est requis.");
   }
 
-  if (payload.typeSession === "Speed recruiting" && payload.souhaiteRecruter === "Oui") {
+  if (
+    payload.typeSession === "Speed recruiting" &&
+    payload.typeParticipant === "Exposant" &&
+    payload.souhaiteRecruter === "Oui"
+  ) {
     if (!payload.postesRecherches || !payload.nombrePostes || !payload.profilRecherche) {
       throw new Error(
         "Les besoins de recrutement doivent être précisés pour le speed recruiting.",
       );
+    }
+  }
+
+  if (
+    payload.typeSession === "Speed recruiting" &&
+    payload.typeParticipant === "Visiteur" &&
+    !payload.chercheUnPoste
+  ) {
+    throw new Error("Le champ 'Cherchez-vous un poste ?' est requis.");
+  }
+
+  if (
+    payload.typeSession === "Speed recruiting" &&
+    payload.typeParticipant === "Visiteur" &&
+    payload.chercheUnPoste === "Oui"
+  ) {
+    if (!payload.cvATransmettre) {
+      throw new Error("Le champ 'Avez-vous un CV à nous transmettre ?' est requis.");
+    }
+
+    if (!payload.postesCherchesVisiteur) {
+      throw new Error("Merci de préciser les postes recherchés par le visiteur.");
     }
   }
 }
@@ -183,6 +221,10 @@ function appendRegistration_(sheet, payload, registrationId, now) {
     payload.nombrePostes,
     payload.profilRecherche,
     payload.fichePoste,
+    payload.chercheUnPoste,
+    payload.cvATransmettre,
+    payload.postesCherchesVisiteur,
+    payload.informationComplementaire,
     "",
     "",
     registrationId,
@@ -225,12 +267,18 @@ function sendAdminNotificationEmail_(payload, registrationId) {
 
 function buildEmailContent_(payload, registrationId) {
   var isSpeedRecruiting = payload.typeSession === "Speed recruiting";
+  var isSpeedRecruitingVisitor =
+    isSpeedRecruiting && payload.typeParticipant === "Visiteur";
   var subject = isSpeedRecruiting
     ? EVENT_NAME + " - Confirmation de votre inscription speed recruiting"
     : EVENT_NAME + " - Confirmation de votre inscription";
 
   var speedText =
-    isSpeedRecruiting
+    isSpeedRecruitingVisitor
+      ? "\n\nVotre inscription au speed recruiting a bien été prise en compte. Si vous avez indiqué être en recherche et disposer d'un CV à transmettre, l'équipe pourra vous recontacter via " +
+        SPEED_RECRUITING_CONTACT_EMAIL +
+        "."
+      : isSpeedRecruiting
       ? "\n\nPour préparer le speed recruiting, vous pouvez transmettre vos besoins de recrutement ou vos fiches de poste à " +
         SPEED_RECRUITING_CONTACT_EMAIL +
         "."
@@ -265,7 +313,13 @@ function buildEmailContent_(payload, registrationId) {
     "\n\nÀ très bientôt,\nL'équipe " +
     EVENT_NAME;
 
-  var speedHtml = isSpeedRecruiting
+  var speedHtml = isSpeedRecruitingVisitor
+    ? '<p style="margin:24px 0 0;color:#0f172a;font-size:15px;line-height:1.7;">Votre inscription au speed recruiting a bien été prise en compte. Si vous avez indiqué être en recherche et disposer d’un CV à transmettre, l’équipe pourra vous recontacter via <a href="mailto:' +
+      SPEED_RECRUITING_CONTACT_EMAIL +
+      '" style="color:#0d4ba6;font-weight:600;text-decoration:none;">' +
+      SPEED_RECRUITING_CONTACT_EMAIL +
+      "</a>.</p>"
+    : isSpeedRecruiting
     ? '<p style="margin:24px 0 0;color:#0f172a;font-size:15px;line-height:1.7;">Pour préparer le speed recruiting, vous pouvez transmettre vos besoins de recrutement ou vos fiches de poste à <a href="mailto:' +
       SPEED_RECRUITING_CONTACT_EMAIL +
       '" style="color:#0d4ba6;font-weight:600;text-decoration:none;">' +
@@ -321,6 +375,8 @@ function buildEmailContent_(payload, registrationId) {
 
 function buildAdminNotificationEmailContent_(payload, registrationId) {
   var isSpeedRecruiting = payload.typeSession === "Speed recruiting";
+  var isSpeedRecruitingVisitor =
+    isSpeedRecruiting && payload.typeParticipant === "Visiteur";
   var spreadsheetUrl = "https://docs.google.com/spreadsheets/d/" + SPREADSHEET_ID + "/edit";
   var subject =
     "[ADMIN] Nouvelle inscription " +
@@ -331,7 +387,20 @@ function buildAdminNotificationEmailContent_(payload, registrationId) {
     payload.session;
 
   var speedRecruitingDetails =
-    isSpeedRecruiting
+    isSpeedRecruitingVisitor
+      ? "\n\nDétails speed recruiting visiteur :\n" +
+        "- Cherche un poste : " +
+        fallbackValue_(payload.chercheUnPoste) +
+        "\n" +
+        "- CV à transmettre : " +
+        fallbackValue_(payload.cvATransmettre) +
+        "\n" +
+        "- Postes recherchés : " +
+        fallbackValue_(payload.postesCherchesVisiteur) +
+        "\n" +
+        "- Information complémentaire : " +
+        fallbackValue_(payload.informationComplementaire)
+      : isSpeedRecruiting
       ? "\n\nDétails speed recruiting :\n" +
         "- Souhaite recruter : " +
         fallbackValue_(payload.souhaiteRecruter) +
@@ -392,7 +461,23 @@ function buildAdminNotificationEmailContent_(payload, registrationId) {
     "\n\nConsulter la feuille : " +
     spreadsheetUrl;
 
-  var speedRecruitingHtml = isSpeedRecruiting
+  var speedRecruitingHtml = isSpeedRecruitingVisitor
+    ? '<div style="margin-top:20px;padding:18px;border:1px solid #dbeafe;border-radius:16px;background:#eff6ff;">' +
+      '<p style="margin:0 0 10px;font-weight:700;color:#1d4ed8;">Détails speed recruiting visiteur</p>' +
+      '<p style="margin:0;font-size:14px;line-height:1.8;color:#334155;">' +
+      "Cherche un poste : <strong>" +
+      escapeHtml_(fallbackValue_(payload.chercheUnPoste)) +
+      "</strong><br>" +
+      "CV à transmettre : <strong>" +
+      escapeHtml_(fallbackValue_(payload.cvATransmettre)) +
+      "</strong><br>" +
+      "Postes recherchés : <strong>" +
+      escapeHtml_(fallbackValue_(payload.postesCherchesVisiteur)) +
+      "</strong><br>" +
+      "Information complémentaire : <strong>" +
+      escapeHtml_(fallbackValue_(payload.informationComplementaire)) +
+      "</strong></p></div>"
+    : isSpeedRecruiting
     ? '<div style="margin-top:20px;padding:18px;border:1px solid #d1fae5;border-radius:16px;background:#ecfdf5;">' +
       '<p style="margin:0 0 10px;font-weight:700;color:#065f46;">Détails speed recruiting</p>' +
       '<p style="margin:0;font-size:14px;line-height:1.8;color:#334155;">' +

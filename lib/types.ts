@@ -35,6 +35,10 @@ export interface RegistrationFormValues {
   nombrePostes: string;
   profilRecherche: string;
   fichePoste: "Oui" | "Non" | "";
+  chercheUnPoste: "Oui" | "Non" | "";
+  cvATransmettre: "Oui" | "Non" | "";
+  postesCherchesVisiteur: string;
+  informationComplementaire: string;
 }
 
 export interface RegistrationPayload {
@@ -55,6 +59,10 @@ export interface RegistrationPayload {
   nombrePostes: string;
   profilRecherche: string;
   fichePoste: string;
+  chercheUnPoste: string;
+  cvATransmettre: string;
+  postesCherchesVisiteur: string;
+  informationComplementaire: string;
   source: string;
 }
 

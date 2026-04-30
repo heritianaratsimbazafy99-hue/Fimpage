@@ -22,11 +22,15 @@ export function createInitialRegistrationForm(
     typeSession: session?.type ?? "",
     sessionId: session?.id ?? "",
     sujetTableRonde: "",
-    souhaiteRecruter: session?.type === "Speed recruiting" ? "Oui" : "",
+    souhaiteRecruter: "",
     postesRecherches: "",
     nombrePostes: "",
     profilRecherche: "",
     fichePoste: "",
+    chercheUnPoste: "",
+    cvATransmettre: "",
+    postesCherchesVisiteur: "",
+    informationComplementaire: "",
   };
 }
 
@@ -63,10 +67,16 @@ export function validateRegistrationForm(
   }
 
   if (values.typeSession === "Speed recruiting" && !values.souhaiteRecruter) {
-    errors.souhaiteRecruter = "Merci d'indiquer si vous recrutez.";
+    if (values.typeParticipant === "Exposant") {
+      errors.souhaiteRecruter = "Merci d'indiquer si vous recrutez.";
+    }
   }
 
-  if (values.typeSession === "Speed recruiting" && values.souhaiteRecruter === "Oui") {
+  if (
+    values.typeSession === "Speed recruiting" &&
+    values.typeParticipant === "Exposant" &&
+    values.souhaiteRecruter === "Oui"
+  ) {
     if (!values.postesRecherches.trim()) {
       errors.postesRecherches = "Précisez les postes recherchés.";
     }
@@ -78,6 +88,21 @@ export function validateRegistrationForm(
     }
     if (!values.fichePoste) {
       errors.fichePoste = "Merci de préciser si vous transmettrez une fiche de poste.";
+    }
+  }
+
+  if (values.typeSession === "Speed recruiting" && values.typeParticipant === "Visiteur") {
+    if (!values.chercheUnPoste) {
+      errors.chercheUnPoste = "Merci d'indiquer si vous cherchez un poste.";
+    }
+
+    if (values.chercheUnPoste === "Oui") {
+      if (!values.cvATransmettre) {
+        errors.cvATransmettre = "Merci d'indiquer si vous avez un CV à transmettre.";
+      }
+      if (!values.postesCherchesVisiteur.trim()) {
+        errors.postesCherchesVisiteur = "Précisez les postes que vous recherchez.";
+      }
     }
   }
 
@@ -112,6 +137,10 @@ export function buildRegistrationPayload(
     nombrePostes: values.nombrePostes.trim(),
     profilRecherche: values.profilRecherche.trim(),
     fichePoste: values.fichePoste,
+    chercheUnPoste: values.chercheUnPoste,
+    cvATransmettre: values.cvATransmettre,
+    postesCherchesVisiteur: values.postesCherchesVisiteur.trim(),
+    informationComplementaire: values.informationComplementaire.trim(),
     source: "fim-landing-v1",
   };
 }
@@ -170,4 +199,3 @@ export async function submitRegistration(
     demoMode: false,
   };
 }
-

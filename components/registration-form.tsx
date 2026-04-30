@@ -74,10 +74,6 @@ export function RegistrationForm({
       ...current,
       typeSession: selectedSession.type,
       sessionId: selectedSession.id,
-      souhaiteRecruter:
-        selectedSession.type === "Speed recruiting"
-          ? current.souhaiteRecruter || "Oui"
-          : current.souhaiteRecruter,
     }));
     setErrors((current) => ({
       ...current,
@@ -91,6 +87,22 @@ export function RegistrationForm({
   );
   const selectedSessionFromForm =
     sessions.find((session) => session.id === formValues.sessionId) ?? null;
+  const isSpeedRecruitingVisitor =
+    formValues.typeSession === "Speed recruiting" &&
+    formValues.typeParticipant === "Visiteur";
+  const isSpeedRecruitingExhibitor =
+    formValues.typeSession === "Speed recruiting" &&
+    formValues.typeParticipant === "Exposant";
+  const societeLabel = isSpeedRecruitingVisitor
+    ? "Entreprise / établissement"
+    : "Société";
+  const societePlaceholder = isSpeedRecruitingVisitor
+    ? "Entreprise, école ou structure actuelle"
+    : "Entreprise / structure";
+  const fonctionLabel = isSpeedRecruitingVisitor ? "Fonction / profil" : "Fonction";
+  const fonctionPlaceholder = isSpeedRecruitingVisitor
+    ? "Ex. Commercial, étudiant, technicien"
+    : "Ex. Responsable RH";
 
   function updateField<Key extends keyof RegistrationFormValues>(
     field: Key,
@@ -112,11 +124,17 @@ export function RegistrationForm({
         )
           ? current.sessionId
           : "",
-      souhaiteRecruter: value === "Speed recruiting" ? current.souhaiteRecruter || "Oui" : "",
+      souhaiteRecruter: value === "Speed recruiting" ? current.souhaiteRecruter : "",
       postesRecherches: value === "Speed recruiting" ? current.postesRecherches : "",
       nombrePostes: value === "Speed recruiting" ? current.nombrePostes : "",
       profilRecherche: value === "Speed recruiting" ? current.profilRecherche : "",
       fichePoste: value === "Speed recruiting" ? current.fichePoste : "",
+      chercheUnPoste: value === "Speed recruiting" ? current.chercheUnPoste : "",
+      cvATransmettre: value === "Speed recruiting" ? current.cvATransmettre : "",
+      postesCherchesVisiteur:
+        value === "Speed recruiting" ? current.postesCherchesVisiteur : "",
+      informationComplementaire:
+        value === "Speed recruiting" ? current.informationComplementaire : "",
       sujetTableRonde: value === "Table ronde" ? current.sujetTableRonde : "",
     }));
 
@@ -131,12 +149,49 @@ export function RegistrationForm({
 
     if (nextSession) {
       updateField("typeSession", nextSession.type);
-      if (nextSession.type === "Speed recruiting" && !formValues.souhaiteRecruter) {
-        updateField("souhaiteRecruter", "Oui");
-      }
     }
 
     onSessionChange(nextSession?.id ?? null);
+  }
+
+  function handleTypeParticipantChange(
+    value: RegistrationFormValues["typeParticipant"],
+  ) {
+    setServerError("");
+    setFormValues((current) => ({
+      ...current,
+      typeParticipant: value,
+      ...(current.typeSession === "Speed recruiting" && value === "Visiteur"
+        ? {
+            souhaiteRecruter: "",
+            postesRecherches: "",
+            nombrePostes: "",
+            profilRecherche: "",
+            fichePoste: "",
+          }
+        : {}),
+      ...(current.typeSession === "Speed recruiting" && value === "Exposant"
+        ? {
+            chercheUnPoste: "",
+            cvATransmettre: "",
+            postesCherchesVisiteur: "",
+            informationComplementaire: "",
+          }
+        : {}),
+    }));
+    setErrors((current) => ({
+      ...current,
+      typeParticipant: undefined,
+      souhaiteRecruter: undefined,
+      postesRecherches: undefined,
+      nombrePostes: undefined,
+      profilRecherche: undefined,
+      fichePoste: undefined,
+      chercheUnPoste: undefined,
+      cvATransmettre: undefined,
+      postesCherchesVisiteur: undefined,
+      informationComplementaire: undefined,
+    }));
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -263,7 +318,7 @@ export function RegistrationForm({
                   Inscription en ligne
                 </p>
                 <p className="text-sm text-slate-500">
-                  Les champs évoluent selon le type de session choisi.
+                  Les champs évoluent selon le type de session et votre profil participant.
                 </p>
               </div>
               <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
@@ -283,23 +338,23 @@ export function RegistrationForm({
                   />
                 </Field>
 
-                <Field label="Société" name="societe" error={errors.societe}>
+                <Field label={societeLabel} name="societe" error={errors.societe}>
                   <input
                     value={formValues.societe}
                     onChange={(event) => updateField("societe", event.target.value)}
                     className={inputClasses}
                     name="societe"
-                    placeholder="Entreprise / structure"
+                    placeholder={societePlaceholder}
                   />
                 </Field>
 
-                <Field label="Fonction" name="fonction" error={errors.fonction}>
+                <Field label={fonctionLabel} name="fonction" error={errors.fonction}>
                   <input
                     value={formValues.fonction}
                     onChange={(event) => updateField("fonction", event.target.value)}
                     className={inputClasses}
                     name="fonction"
-                    placeholder="Ex. Responsable RH"
+                    placeholder={fonctionPlaceholder}
                   />
                 </Field>
 
@@ -322,8 +377,7 @@ export function RegistrationForm({
                   <select
                     value={formValues.typeParticipant}
                     onChange={(event) =>
-                      updateField(
-                        "typeParticipant",
+                      handleTypeParticipantChange(
                         event.target.value as RegistrationFormValues["typeParticipant"],
                       )
                     }
@@ -398,11 +452,15 @@ export function RegistrationForm({
                 </Field>
               ) : null}
 
-              {formValues.typeSession === "Speed recruiting" ? (
+              {isSpeedRecruitingExhibitor ? (
                 <div className="grid gap-5 rounded-[1.75rem] border border-emerald-100 bg-emerald-50/60 p-5 md:grid-cols-2">
                   <div className="md:col-span-2">
                     <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700">
-                      Informations complémentaires speed recruiting
+                      Informations recruteur speed recruiting
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-emerald-950/80">
+                      Ce volet nous aide à préparer les mises en relation avec les
+                      profils que vous souhaitez rencontrer pendant la session.
                     </p>
                   </div>
 
@@ -428,21 +486,111 @@ export function RegistrationForm({
                     </select>
                   </Field>
 
+                  {formValues.souhaiteRecruter === "Oui" ? (
+                    <>
+                      <Field
+                        label="Souhaitez-vous transmettre une fiche de poste ?"
+                        name="fichePoste"
+                        error={errors.fichePoste}
+                      >
+                        <select
+                          value={formValues.fichePoste}
+                          onChange={(event) =>
+                            updateField(
+                              "fichePoste",
+                              event.target.value as RegistrationFormValues["fichePoste"],
+                            )
+                          }
+                          className={inputClasses}
+                          name="fichePoste"
+                        >
+                          <option value="">Choisir</option>
+                          <option value="Oui">Oui</option>
+                          <option value="Non">Non</option>
+                        </select>
+                      </Field>
+
+                      <Field
+                        label="Quels postes recherchez-vous ?"
+                        name="postesRecherches"
+                        error={errors.postesRecherches}
+                      >
+                        <input
+                          value={formValues.postesRecherches}
+                          onChange={(event) =>
+                            updateField("postesRecherches", event.target.value)
+                          }
+                          className={inputClasses}
+                          name="postesRecherches"
+                          placeholder="Ex. commerciaux, techniciens, RH"
+                        />
+                      </Field>
+
+                      <Field
+                        label="Nombre de postes"
+                        name="nombrePostes"
+                        error={errors.nombrePostes}
+                      >
+                        <input
+                          value={formValues.nombrePostes}
+                          onChange={(event) =>
+                            updateField("nombrePostes", event.target.value)
+                          }
+                          className={inputClasses}
+                          name="nombrePostes"
+                          placeholder="Ex. 3"
+                        />
+                      </Field>
+
+                      <div className="md:col-span-2">
+                        <Field
+                          label="Profil recherché"
+                          name="profilRecherche"
+                          error={errors.profilRecherche}
+                        >
+                          <textarea
+                            value={formValues.profilRecherche}
+                            onChange={(event) =>
+                              updateField("profilRecherche", event.target.value)
+                            }
+                            className={`${inputClasses} min-h-[120px] resize-y`}
+                            name="profilRecherche"
+                            placeholder="Compétences, expérience, niveau, disponibilité, langues, etc."
+                          />
+                        </Field>
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+              ) : null}
+
+              {isSpeedRecruitingVisitor ? (
+                <div className="grid gap-5 rounded-[1.75rem] border border-sky-100 bg-sky-50/70 p-5 md:grid-cols-2">
+                  <div className="md:col-span-2">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+                      Informations candidat speed recruiting
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-sky-950/80">
+                      Ces informations nous aident à mieux orienter votre présence et
+                      à préparer les mises en relation les plus pertinentes.
+                    </p>
+                  </div>
+
                   <Field
-                    label="Souhaitez-vous transmettre une fiche de poste ?"
-                    name="fichePoste"
-                    error={errors.fichePoste}
+                    label="Cherchez-vous un poste ?"
+                    name="chercheUnPoste"
+                    error={errors.chercheUnPoste}
                   >
                     <select
-                      value={formValues.fichePoste}
+                      value={formValues.chercheUnPoste}
                       onChange={(event) =>
                         updateField(
-                          "fichePoste",
-                          event.target.value as RegistrationFormValues["fichePoste"],
+                          "chercheUnPoste",
+                          event.target.value as RegistrationFormValues["chercheUnPoste"],
                         )
                       }
                       className={inputClasses}
-                      name="fichePoste"
+                      name="chercheUnPoste"
                     >
                       <option value="">Choisir</option>
                       <option value="Oui">Oui</option>
@@ -450,52 +598,63 @@ export function RegistrationForm({
                     </select>
                   </Field>
 
-                  <Field
-                    label="Quels postes recherchez-vous ?"
-                    name="postesRecherches"
-                    error={errors.postesRecherches}
-                  >
-                    <input
-                      value={formValues.postesRecherches}
-                      onChange={(event) =>
-                        updateField("postesRecherches", event.target.value)
-                      }
-                      className={inputClasses}
-                      name="postesRecherches"
-                      placeholder="Ex. commerciaux, techniciens, RH"
-                    />
-                  </Field>
+                  {formValues.chercheUnPoste === "Oui" ? (
+                    <>
+                      <Field
+                        label="Avez-vous un CV à nous transmettre ?"
+                        name="cvATransmettre"
+                        error={errors.cvATransmettre}
+                      >
+                        <select
+                          value={formValues.cvATransmettre}
+                          onChange={(event) =>
+                            updateField(
+                              "cvATransmettre",
+                              event.target.value as RegistrationFormValues["cvATransmettre"],
+                            )
+                          }
+                          className={inputClasses}
+                          name="cvATransmettre"
+                        >
+                          <option value="">Choisir</option>
+                          <option value="Oui">Oui</option>
+                          <option value="Non">Non</option>
+                        </select>
+                      </Field>
 
-                  <Field
-                    label="Nombre de postes"
-                    name="nombrePostes"
-                    error={errors.nombrePostes}
-                  >
-                    <input
-                      value={formValues.nombrePostes}
-                      onChange={(event) =>
-                        updateField("nombrePostes", event.target.value)
-                      }
-                      className={inputClasses}
-                      name="nombrePostes"
-                      placeholder="Ex. 3"
-                    />
-                  </Field>
+                      <Field
+                        label="Quels postes cherchez-vous ?"
+                        name="postesCherchesVisiteur"
+                        error={errors.postesCherchesVisiteur}
+                      >
+                        <input
+                          value={formValues.postesCherchesVisiteur}
+                          onChange={(event) =>
+                            updateField("postesCherchesVisiteur", event.target.value)
+                          }
+                          className={inputClasses}
+                          name="postesCherchesVisiteur"
+                          placeholder="Ex. assistant commercial, comptable, technicien"
+                        />
+                      </Field>
+                    </>
+                  ) : null}
 
                   <div className="md:col-span-2">
                     <Field
-                      label="Profil recherché"
-                      name="profilRecherche"
-                      error={errors.profilRecherche}
+                      label="Information complémentaire"
+                      name="informationComplementaire"
+                      error={errors.informationComplementaire}
+                      hint="Optionnel : disponibilité, secteur recherché, expérience, mobilité, langues, etc."
                     >
                       <textarea
-                        value={formValues.profilRecherche}
+                        value={formValues.informationComplementaire}
                         onChange={(event) =>
-                          updateField("profilRecherche", event.target.value)
+                          updateField("informationComplementaire", event.target.value)
                         }
                         className={`${inputClasses} min-h-[120px] resize-y`}
-                        name="profilRecherche"
-                        placeholder="Compétences, expérience, niveau, disponibilité, langues, etc."
+                        name="informationComplementaire"
+                        placeholder="Ajoutez toute précision utile pour préparer votre participation."
                       />
                     </Field>
                   </div>
