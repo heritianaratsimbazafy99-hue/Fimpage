@@ -1195,15 +1195,16 @@ export const sessions: Session[] = [
   },
   {
     id: "workshop-smilebox-commercial",
-    slug: "bonnes-pratiques-de-developpement-commercial",
+    slug: "prospection-signature-systeme-commercial-performant-predictible",
     type: "Atelier",
     dayKey: "Dimanche",
     dayLabel: "Dimanche 10 mai 2026",
     dateIso: "2026-05-10",
     time: "14:00 - 15:00",
-    title: "Les bonnes pratiques de développement commercial",
+    title:
+      "De la prospection à la signature : bâtir un système commercial performant et prédictible",
     description:
-      "Un atelier centré sur la prospection, la qualification des opportunités et la structuration de la démarche commerciale.",
+      "Un atelier pour structurer une démarche commerciale efficace : générer des opportunités qualifiées, piloter son pipeline et améliorer son taux de transformation.",
     location: "Smilebox Academy",
     host: "Smilebox",
     audience: "Commerciaux, dirigeants, porteurs de projets",
