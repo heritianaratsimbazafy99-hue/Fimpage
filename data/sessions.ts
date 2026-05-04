@@ -1202,7 +1202,7 @@ export const sessions: Session[] = [
     dateIso: "2026-05-10",
     time: "14:00 - 15:00",
     title:
-      "De la prospection à la signature : bâtir un système commercial performant et prédictible",
+      "👉 De la prospection à la signature : bâtir un système commercial performant et prédictible",
     description:
       "Un atelier pour structurer une démarche commerciale efficace : générer des opportunités qualifiées, piloter son pipeline et améliorer son taux de transformation.",
     location: "Smilebox Academy",
