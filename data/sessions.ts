@@ -851,6 +851,25 @@ export const sessions: Session[] = [
     capacityNote: "Inscription recommandée",
   },
   {
+    id: "conference-crif-donnees-credit",
+    slug: "donnees-transforment-decision-financiere",
+    type: "Conférence",
+    dayKey: "Samedi",
+    dayLabel: "Samedi 9 mai 2026",
+    dateIso: "2026-05-09",
+    time: "12:45 - 13:45",
+    title:
+      "De l’invisible à l’accès au crédit : comment les données transforment la décision financière",
+    description:
+      "Une conférence sur le rôle des données dans l’accès au crédit, l’analyse des profils financiers et la transformation des décisions de financement.",
+    location: "Salle à confirmer",
+    host: "CRIF",
+    speaker:
+      "Monsieur Faly ANDRIAMBELO - Sales Manager ; Madame Malala RANDRIAMIZAKA - Strategic Sales Advisor",
+    audience: "Entreprises, institutions financières, décideurs, porteurs de projets",
+    capacityNote: "Inscription recommandée",
+  },
+  {
     id: "conference-propriete-intellectuelle-ressources-naturelles",
     slug: "strategie-hybride-propriete-intellectuelle-ressources-naturelles",
     type: "Conférence",
