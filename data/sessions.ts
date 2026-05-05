@@ -47,13 +47,13 @@ export const sessions: Session[] = [
     dayLabel: "Jeudi 7 mai 2026",
     dateIso: "2026-05-07",
     time: "12:45 - 13:45",
-    title:
-      "Comment rendre les petites et moyennes entreprises malgaches plus compétitives face aux importations ?",
+    title: "Comment rendre les PME malgaches plus compétitives face aux importations ?",
     description:
       "Une table ronde consacrée aux leviers de compétitivité des petites et moyennes entreprises, à la structuration de l’offre locale et aux conditions de marché.",
     location: "RUBIS · Table ronde 1",
-    host: "Ministère du Commerce et de la Consommation",
-    speaker: "Madame José Rosina HASINIAINA - Chef du Service des sauvegardes",
+    host: "MinCC",
+    speaker:
+      "Intervenante : RAZAFINDRAKOPY KEMBA Floria - Chef de service en suivi et évaluation auprès de l’ANMCC ; Modératrice : Randriarinosy Mioranantenaina Muriella - Chef de service en communication auprès de l’ANMCC",
     audience: "Entreprises, institutions, organisations professionnelles",
     capacityNote: "Places limitées, inscription recommandée",
   },
@@ -97,14 +97,14 @@ export const sessions: Session[] = [
     id: "tr-controle-prix",
     slug: "mecanismes-de-controle-des-prix-efficacite-limites-et-alternatives",
     type: "Table ronde",
-    dayKey: "Jeudi",
-    dayLabel: "Jeudi 7 mai 2026",
-    dateIso: "2026-05-07",
+    dayKey: "Vendredi",
+    dayLabel: "Vendredi 8 mai 2026",
+    dateIso: "2026-05-08",
     time: "12:45 - 13:45",
     title: "Mécanismes de contrôle des prix : efficacité, limites et alternatives",
     description:
       "Un débat sur les mécanismes de régulation, leurs effets concrets et les pistes d’équilibre pour les acteurs économiques.",
-    location: "RUBIS · Table ronde 3",
+    location: "GRENAT",
     host: "Ministère du Commerce et de la Consommation",
     speaker:
       "Fanomezantsoa Gilchrist RAKOTOSON - Directeur Général du Commerce Intérieur et de la Consommation, Ministère du Commerce et de la Consommation",
@@ -207,15 +207,15 @@ export const sessions: Session[] = [
     id: "tr-marketing-touristique",
     slug: "digitalisation-marketing-touristique",
     type: "Table ronde",
-    dayKey: "Jeudi",
-    dayLabel: "Jeudi 7 mai 2026",
-    dateIso: "2026-05-07",
+    dayKey: "Vendredi",
+    dayLabel: "Vendredi 8 mai 2026",
+    dateIso: "2026-05-08",
     time: "14:00 - 15:00",
     title:
-      "Digitalisation du marketing touristique : quelles stratégies pour renforcer la visibilité et l’attractivité de Madagascar à l’international ?",
+      "Digitalisation du marketing touristique : quelles sont les stratégies pour renforcer la visibilité et l’attractivité de Madagascar à l’international ?",
     description:
       "Une table ronde sur les stratégies numériques, la communication touristique et le rayonnement international de la destination Madagascar.",
-    location: "RUBIS · Table ronde 4",
+    location: "GRENAT",
     host: "Ministère du Tourisme et de l’Artisanat",
     speaker:
       "Madame Marie Esméralda FIATY - Directrice du Système Informatique et de la Communication",
