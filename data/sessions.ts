@@ -122,10 +122,10 @@ export const sessions: Session[] = [
     title: "Du champ à l’export : une vision unifiée du commerce, agir ensemble pour performer",
     description:
       "Une conférence sur la coordination des acteurs, la performance commerciale et les passerelles entre production, transformation et exportation.",
-    location: "SAPHIR",
+    location: "EMERAUDE",
     host: "Ministère du Commerce et de la Consommation",
     speaker:
-      "Fanomezantsoa Gilchrist RAKOTOSON - Directeur Général du Commerce Intérieur et de la Consommation ; Tiava Ny Kanto RAJOHSON - Directeur Général du Commerce Extérieur ; Nainanirina RAZAFINDRAZAKA - Directeur Général de l’Industrialisation, Ministère de l’Industrialisation et du Développement du Secteur Privé ; Tantely RAKOTOARIMANANA - Directeur des Affaires Juridiques et de la Lutte contre les Fraudes, Direction Générale des Douanes",
+      "Fanomezantsoa Gilchrist RAKOTOSON - Directeur Général du Commerce Intérieur et de la Consommation ; Tiava Ny Kanto RAJOHSON - Directeur Général du Commerce Extérieur ; Nainanirina RAZAFINDRAZAKA - Directeur Général de l’Industrialisation, Ministère de l’Industrialisation et du Développement du Secteur Privé ; Tantely RAKOTOARIMANANA - Directeur des Affaires Juridiques et de la Lutte contre les Fraudes, Direction Générale des Douanes ; RAKOTOMAINTY Haintsoa Nirina - Directeur de l’Agriculture Durable et biologique - MiASA",
     audience: "Producteurs, exportateurs, industriels, institutions",
     capacityNote: "Inscription recommandée",
   },
